@@ -1,0 +1,1 @@
+{"name":"Local: Toggle the Streetlights","url":"d:\\ICPC-2026 prep\\Toggle the Streetlights.cpp","tests":[{"id":1790920570387,"input":"1\n5 1\n01010","output":"01110"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ICPC-2026 prep\\Toggle the Streetlights.cpp","group":"local","local":true}
