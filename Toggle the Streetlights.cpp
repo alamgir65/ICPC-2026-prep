@@ -72,23 +72,28 @@ ll ncr(ll n, ll r)
 void solve(){
     int n,k; cin>>n>>k;
     string s,t; cin>>s;
-    if(k%2==0){
-        out(s)
-        return;
-    }
 
-    string s1,s2,s3,s4,s5;
-    for(int j=0;j<5;j++){
-        t[0]=s[0],t[n-1]=s[n-1];
+    vector<string> ans;
+    ans.pb(s);
+
+    for(int j=0;j<=15;j++){
+        s = t = ans[j];
         for(int i=1;i<n-1;i++){
             if(s[i-1] == '1' && s[i+1] == '1'){
                 if(s[i]=='1') t[i]='0';
                 else t[i]='1';
             }
-            else t[i]=s[i];
         }
+        ans.pb(t);
     }
-    out(s)
+    if(k < 15){
+        out(ans[k])
+    }
+    else{
+        if(k%2) out(ans[5])
+        else out(ans[6])
+    }
+    // out(s)
 }
 love{
     Alamgir

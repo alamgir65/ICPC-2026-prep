@@ -69,27 +69,16 @@ ll ncr(ll n, ll r)
     ll den = (factorial(r) * factorial(n - r)) % MOD;
     return mp[{ n, r }] = (num * modinv(den)) % MOD;
 }
-int primes[500005];
 void solve(){
-    int g,w; cin>>w>>g;
-    double x = w-g;
-    double ans = x/2.0;
-    cout<< setprecision(4) << ans << endl;
-}
-void set_prime(){
-    int j=0;
-    for(int i=2;i<8000000;i++){
-        if(isPrime(i)){
-            if(j<500004) primes[j++] = i;
-            else break;
-        }
-    }
+    string s; cin>>s;
+    string t = s.substr(0,s.size()/2 );
+    reverse(all(t));
+    out(t)
 }
 love{
     Alamgir
     int t=1; 
     cin>>t;
-    set_prime();
     for(int i=1;i<=t;i++){
         solve();
     }

@@ -71,25 +71,35 @@ ll ncr(ll n, ll r)
 }
 int primes[500005];
 void solve(){
-    int g,w; cin>>w>>g;
-    double x = w-g;
-    double ans = x/2.0;
-    cout<< setprecision(4) << ans << endl;
-}
-void set_prime(){
-    int j=0;
-    for(int i=2;i<8000000;i++){
-        if(isPrime(i)){
-            if(j<500004) primes[j++] = i;
-            else break;
+    int n; cin>>n;
+    // n--;
+    ll limit = 7400000;
+    vector<bool> isItPrime(limit+1,true);
+    isItPrime[0] = isItPrime[1] = false;
+    int k = 0;
+    for(int i=2; 1LL * i * i < limit ; i += 1){
+        if(isItPrime[i]){
+            // primes[k++] = i;
+            for(ll j = 1LL * i * i; j <= limit ; j += i){
+                isItPrime[j] = false;
+            }
+        }
+    }
+
+    for(int i=2; i<limit; i++){
+        if(isItPrime[i]){
+            k++;
+            if (k == n) {
+                cout << i << '\n';
+                break;
+            }
         }
     }
 }
 love{
     Alamgir
     int t=1; 
-    cin>>t;
-    set_prime();
+    // cin>>t;
     for(int i=1;i<=t;i++){
         solve();
     }
