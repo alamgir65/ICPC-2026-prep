@@ -1,0 +1,1 @@
+{"name":"Local: Corridor Light Repair","url":"d:\\ICPC-2026 prep\\Corridor Light Repair.cpp","tests":[{"id":1791575913894,"input":"4\n0 1 1 0","output":""},{"id":1791576088838,"input":"4\n0 0 1 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\ICPC-2026 prep\\Corridor Light Repair.cpp","group":"local","local":true}
