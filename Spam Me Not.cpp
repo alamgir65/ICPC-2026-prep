@@ -86,10 +86,15 @@ void solve(){
 
             for(int i=0;i<n;i++){
                 tm += s[i];
-
                 if(i==n-1 || s[i+1] == '.'){
-                    if()
-                    mp[u].pb({tm,true});
+                    // if()
+                    vector<pair<string,bool>> it = mp[u];
+                    if( find(all(it),make_pair(tm,true)) != it.end()) continue;
+                    else if( find(all(it),make_pair(tm,false)) != it.end()){
+                        auto itt = find(all(mp[u]),make_pair(tm,false));
+                        *itt = make_pair(tm,true);
+                    }
+                    else mp[u].pb({tm,true});
                 }
             }
         }
