@@ -75,6 +75,7 @@ int main()
     for(int i=1; i<=t; i++){
         cout<<"Case "<<i<<":\n";
         solve();
+        // hudai update kore labh nai
     }
     return 0;
 }
